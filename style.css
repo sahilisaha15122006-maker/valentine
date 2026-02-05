@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle, #ff4d6d, #c9184a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 0 40px rgba(255,0,100,0.5);
+}
+
+.question {
+  color: #c9184a;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: #adb5bd;
+  position: relative;
+}
+
+.hearts::before {
+  content: "💖 💕 💘 💓";
+  position: absolute;
+  animation: float 6s infinite linear;
+  font-size: 20px;
+}
+
+@keyframes float {
+  from { bottom: -20px; left: 40%; }
+  to { bottom: 100%; left: 60%; opacity: 0; }
+}
